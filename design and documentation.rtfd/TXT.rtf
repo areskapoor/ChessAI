@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww23700\viewh13380\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 TP3 Update\
+
+\fs24 I have decided to make a more in-depth evaluation function that looks at board positioning, piece weight, and pieces attacked and protected for each team. I have also made nice starting and ending screens for the game that let you choose different modes, and even press r to restart game. The game also features castling, advancing pawns to become queens, and has different AI difficulties.
+\fs36 \
+\
+Chess AI\
+
+\f1\i\fs24 Chess AI is the classic game of chess with an AI built on top of it that you can play against. The game only uses the 112 graphics module for drawing the chess game and uses the minimax algorithm for the AI. In addition to the AI, you can play against your friend on the same computer.\
+
+\f2\i0\b\fs28 Competitive Analysis\
+
+\f0\b0\fs24 After looking around the internet, it can be seen that a chess AI has been built before.  Even in 112, there are a few projects that have been very similar. My project is going to be similar to all Chess AI projects that also use minimax and 112 graphics, but I am not using anyone else\'92s code and am building every part of the game from the ground up. Some of the main differences are in the extra game-modes I will build post MVP which will be very creative and unlike anything that exists.\
+
+\f2\b\fs28 \
+Structural Plan\
+
+\f0\b0\fs24 The chess portion of the game is organized in 3 files, main.py, bounds.py, and chessPieces.py. Main.py holds the model view controller and all of the logic that relates to different parts of that, bounds.py has the functions getCellBounds and getCell from the 112 notes., and chessPiececs.py holds all of the chess piece objects (pawn, queen, king, etc. which are all subclasses of the main class Piece). Main.py is where the minimax algorithm will be called to simulate different moves in chess and decide which is better. It is also where the logic for finding possible moves is, deciding what to do based on a certain mouse press, and determining if there is a check and checkmate. The minimax algorithm will be written in a separate file called miniMax.py where it will take a certain instance of the board, and simulate moves to a certain depth.
+\f2\b\fs28 \
+\
+Algorithmic Plan\
+
+\f0\b0\fs24 The hardest part of the project is going to be implementing the minimax algorithm for the chess AI, and secondly, getting checks to work in all states (need to check if a move puts the current player in check, if it puts other team in check, what moves that other team can make to get out of chess - killing piece that is checking them, moving into cover, etc. and if there are no possible moves to make then checkmate) - requires simulation of possible moves.\
+\
+For the minimax algorithm, I will need to create a recursive function that first creates a separate instance of the game in the current moment, checks if current player is the maximizer or minimizer, then for each possible move from that position, it calls minimax function again, and repeats the process until reaching the max depth set at the start, or if the game is over at a move. Once it reaches that max depth, it returns a heuristic (number associated with move), and then maximizes or minimizes that based on who the current player is.\
+\
+I am going to try to implement this algorithm for a simple game like tic tac toe first, and then scale the solution to chess.\
+
+\f2\b\fs28 \
+Timeline Plan\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b0\fs24 \cf0 - By Sunday, April 17th, have whole chess game working\
+- By Monday, April 18th, add all images into game and start working on minimax algorithm\
+- By Tuesday, April 19th, add start screen and choice between two modes (vs. ai or coop)\
+- By Friday, April 22nd, finish minimax algorithm and be done with MVP version of game\
+- By April 27th, finish adding additional post MVP features
+\f2\b\fs28 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Version Control Plan\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b0\fs24 \cf0 For version control I am using GitHub to backup all of my code and document all my changes:{{\NeXTGraphic Screen Shot 2022-04-16 at 3.29.30 PM.png \width19960 \height11360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+I am currently running into issues with GitHub so have been temporarily backing up on google drive but will resume to using GitHub shortly
+\f2\b\fs28 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Module List\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b0\fs24 \cf0 cmu 112 graphics is the only module being used
+\f2\b\fs28 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+}

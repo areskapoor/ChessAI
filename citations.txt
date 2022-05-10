@@ -1,0 +1,20 @@
+Citations for 112 Term Project (not code copying citations: those can be found in files where code exists
+
+
+ - Algorithms Explained - minimax and alpha-beta pruning: https://www.youtube.com/watch?v=l-hh51ncgDI
+
+ - MiniMax Wikipedia Article - covers minimax, maximin, alpha-beta pruning: https://en.wikipedia.org/wiki/Minimax
+
+ - Minimax for Tic Tac Toe - https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/
+
+- Article on outline on how chess AI is created (no code): https://medium.com/@SereneBiologist/the-anatomy-of-a-chess-ai-2087d0d565
+
+- Article on how to evaluate chess moves: https://www.chessprogramming.org/Evaluation
+
+NOTE: No code was copied from above resources, they were just used to help my understanding of minimax or for inspiration on how to design code. Most citations do not even contain code but were just used to learn more about how to make AI smarter (what matters the most in chess so chess AI makes good moves).
+
+ - Consulted with a friend from High School (Parker Robinson) who is a very good chess player on how I should weigh parts of eval function - he has no coding experience and did not help in any way except for helping me decide what is the most important when deciding what move to make in chess
+
+Image Citations (only images used were chess pieces)
+ - all found through this link: https://www.symbols.com/search/chess
+
